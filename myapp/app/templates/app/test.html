@@ -1,0 +1,29 @@
+{% extends "./_base.html" %}
+{% block content %}
+<div class="container">
+    <h2 class="text-center">詳細表示</h2>
+    <div class="row">
+        <div class="col-12">
+            <a class="btn btn-outline-secondary float-right" href="">戻るtest</a>
+        </div>
+    </div>
+    <!--  -->
+    {% include "./item_card.html" %}
+    <div class="row">
+        <div class="col-12">
+            <a class="btn btn-outline-secondary float-right" href="">戻るtest</a>
+        </div>
+    </div>
+</div>
+aaaa
+{{ title|pprint }}
+<div>
+{% for val in title %}
+{{ val.id }}==>{{ val.name }}とか<br>
+{% empty %}
+no_data<br>
+{% endfor %}
+</div>
+
+
+{% endblock %}
